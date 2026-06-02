@@ -4,12 +4,18 @@ type ButtonProps = {
   label: string
   onClick: () => void
   variant?: 'number' | 'operator' | 'action'
+  className?: string
 }
 
-const Button = ({ label, onClick, variant = 'number' }: ButtonProps) => {
+const Button = ({
+  label,
+  onClick,
+  variant = 'number',
+  className = '',
+}: ButtonProps) => {
   return (
     <button
-      className={`btn btn-${variant}`}
+      className={`btn btn-${variant} ${className}`}
       onClick={onClick}
       aria-label={label}
     >

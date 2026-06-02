@@ -77,5 +77,18 @@ export const useCalculator = () => {
     setWaitingForSecond(false)
   }
 
-  return { display, handleNumber, handleOperator, handleEquals, handleClear }
+  const handleDecimal = () => {
+    if (display === 'ERROR') return
+    if (display.length >= MAX_DIGITS) return
+    if (waitingForSecond) {
+      setDisplay('0.')
+      setWaitingForSecond(false)
+      return
+    }
+    if (!display.includes('.')) {
+      setDisplay(display + '.')
+    }
+  }
+
+  return { display, handleNumber, handleOperator, handleEquals, handleClear, handleDecimal }
 }

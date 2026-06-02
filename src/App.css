@@ -12,6 +12,17 @@ body {
   font-family: monospace;
 }
 
+.repo-link {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.repo-link a {
+  color: #D92B8B;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
 
 
 

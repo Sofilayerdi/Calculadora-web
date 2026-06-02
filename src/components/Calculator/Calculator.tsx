@@ -4,7 +4,7 @@ import Keyboard from "../Keyboard/Keyboard"
 import './Calculator.css'
 
 const Calculator = () => {
-  const { display, handleNumber, handleOperator, handleEquals, handleClear } = useCalculator()
+  const { display, handleNumber, handleOperator, handleEquals, handleClear, handleDecimal } = useCalculator()
 
   return (
     <div className="calculator">
@@ -14,6 +14,7 @@ const Calculator = () => {
         onOperator={handleOperator}
         onEquals={handleEquals}
         onClear={handleClear}
+        onDecimal={handleDecimal}
       />
     </div>
   )
