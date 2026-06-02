@@ -24,7 +24,7 @@ const Keyboard = ({ onNumber, onOperator, onEquals, onClear, onDecimal }: Keyboa
     if (operators.includes(value)) onOperator(value as '+' | '-' | '*' | '/')
     else if (value === '=') onEquals()
     else if (value === 'C') onClear()
-  else if (value === '.') onDecimal()
+    else if (value === '.') onDecimal()
     else onNumber(value)
   }
 

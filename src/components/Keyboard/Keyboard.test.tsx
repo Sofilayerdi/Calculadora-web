@@ -8,6 +8,7 @@ const defaultProps = {
   onOperator: vi.fn(),
   onEquals: vi.fn(),
   onClear: vi.fn(),
+  onDecimal: vi.fn(),
 }
 
 describe('Keyboard', () => {
